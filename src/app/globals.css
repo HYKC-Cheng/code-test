@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-card-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,16 +18,42 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-custom-black {
+    background-color: #030303;
+  }
+
+  .color-card-title {
+    color: rgba(237, 237, 237, 1);
+  }
+  .color-card-tag {
+    color: rgba(255, 255, 255, 1);
+  }
+  .color-card-description {
+    color: rgba(103, 103, 103, 1);
+  }
+  .color-card-footer {
+    color: rgba(242, 242, 242, 1);
+  }
+  .color-card-green {
+    color: rgba(158, 250, 19, 1);
+  }
+  .color-title {
+    color: rgba(241, 241, 241, 1);
+  }
+
+  .bg-button-wrapper {
+    background: linear-gradient(270deg, #030303 0%, rgba(3, 3, 3, 0.8) 55.46%, rgba(3, 3, 3, 0) 100%);
   }
 }
